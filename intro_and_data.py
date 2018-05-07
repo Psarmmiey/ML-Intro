@@ -28,7 +28,7 @@ y = np.array(df['label'])
 
 x_train, x_test, y_train, y_test = cross_validation.train_test_split(x, y, test_size=0.2)
 
-clf = LinearRegression()
+clf = svm.SVR()
 clf.fit(x_train, y_train)
 accuracy = clf.score(x_test, y_test)
 
